@@ -1,0 +1,72 @@
+﻿body {margin:0;background:#efefef;color:#47484a;font-family: "Helvetica Neue",Arial,sans-serif;font-size:14px;}
+
+p{margin:0 0 10px}
+small{font-size:85%}
+strong{font-weight:bold}
+em{font-style:italic}
+h1,h2,h3,h4,h5,h6{margin:0;font-family:inherit;font-weight:bold;line-height:1;color:inherit}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-weight:normal;line-height:1;color:#999999}
+h1{font-size:36px;line-height:40px}
+h2{font-size:30px;line-height:40px}
+h3{font-size:24px;line-height:40px}
+h4{font-size:18px;line-height:20px}
+h5{font-size:14px;line-height:20px}
+h6{font-size:12px;line-height:20px}
+h1 small{font-size:24px}
+h2 small{font-size:18px}
+h3 small{font-size:14px}
+h4 small{font-size:14px}
+
+.cfix{*zoom:1}.cfix:before,.cfix:after{display:table;content:"";line-height:0}
+.cfix:after{clear:both}
+/*float-left/right*/
+.pointer{cursor:pointer}
+.cursor{cursor:default}
+.fltr{float:left;}
+.fltl{float:right;}
+.txtr {text-align: right;}
+.txtl {text-align: left;}
+.txtc {text-align:center}
+.bk {display:block}
+
+.vtop,.vtop th,.vtop td {vertical-align: top;}
+.vmid,.vmid th,.vmid td {vertical-align: middle;}
+.vbot,.vbot th,.vbot td {vertical-align: bottom;}
+
+.scroll {overflow: auto;-webkit-overflow-scrolling:touch}
+.scrollx {overflow-x:scroll}
+.scrolly {overflow-y:scroll}
+.rel {position: relative; *zoom:1}
+.bdr {border: 1px solid #ccc;}
+
+/* padding */
+.prm { padding-right:8px; }
+
+/*Buttons*/
+.btn {font-family:inherit;border:0; padding:5px 12px 6px; font-weight:bold; background:#dfdfe0; position: relative; color: #4b4c4d; -webkit-border-radius: 3px; display: inline-block; margin-bottom: 0; font-size: 14px; line-height: 20px; text-align: center; vertical-align: middle; cursor: pointer; -webkit-user-select: none; *zoom:1;-webkit-box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);}
+.btn.pri,.btn.sec {color:#fff} 
+.btn.pri {background:#8CC63F;}
+.btn.sec {background:#7F8081;}
+
+/*spinner*/
+.spin {margin-left: auto;margin-right: auto;border-radius: 50%;background: transparent;border: 1px solid #9fa0a1;border-top-color: transparent;border-right-color: transparent;-webkit-animation: rotate 1.2s infinite linear;-moz-animation: rotate 1.2s infinite linear;-ms-animation: rotate 1.2s infinite linear;animation: rotate 1.2s infinite linear;}
+.spin.xs {width: 12px; height: 12px; border-width: 3px}
+.spin.s {width: 15px; height: 15px; border-width: 4px}
+.spin.m {width: 20px; height: 20px; border-width: 8px}
+.spin.l {width: 35px; height: 35px; border-width: 12px}
+
+@keyframes rotate {
+    to { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -o-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes rotate {
+    to { -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotate {
+    to { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+.mainContent {
+	padding:12px 16px;
+}

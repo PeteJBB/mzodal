@@ -4,7 +4,25 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
-<h2>Mzodal - the z makes it cool.</h2>
+<h1>Mzodal</h1>
+<p>A lightweight modal library for use with jQuery and MVC.</p>
 
-<p>Test page for Mzodal - blah blah</p>
-<p><a class="js-mzodal" href="@Url.Action("BasicModal")">Show me a modal already!</a></p>
+<h2>Features include:</h2>
+<ul>
+	<li>Auto height adjustment to fit window</li>
+	<li>Built-in history stack for wizards and other step workflows</li>
+	<li>Reusable layout with options for each modal view</li>
+	<li>Subscribable events for advanced coding</li>
+</ul>
+
+<h2>Examples</h2>
+<table>
+<tr>
+	<td class="prm"><a class="js-mzodal" href="@Url.Action("BasicModal")">Basic Modal</a></td>
+	<td>Simple modal containing some text and a close button at the top</td>
+</tr>
+<tr>
+	<td class="prm"><a class="js-mzodal" href="@Url.Action("ConfirmationBox")">Confirmation Box</a></td>
+	<td>Useful in applications to confirm an action, pop up warnings etc</td>
+</tr>
+</table>

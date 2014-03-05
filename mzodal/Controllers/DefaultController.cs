@@ -17,5 +17,10 @@ namespace mzodal.Controllers
         {
             return View("BasicModal");
         }
+
+		public ActionResult ConfirmationBox()
+        {
+            return View("ConfirmationBox");
+        }
 	}
 }

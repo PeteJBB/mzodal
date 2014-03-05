@@ -77,10 +77,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\css\styles.css" />
-    <Content Include="Content\css\mzodal.css" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Content\mzodal.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\css\reset.css" />
+    <Content Include="Content\reset.css" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -105,6 +105,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_LayoutMzodal.cshtml" />
     <Content Include="Views\Default\BasicModal.cshtml" />
+    <Content Include="Views\Default\ConfirmationBox.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

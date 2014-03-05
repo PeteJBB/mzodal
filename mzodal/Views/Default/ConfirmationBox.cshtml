@@ -1,0 +1,23 @@
+﻿@using Mzodal.Classes
+
+@{
+    ViewBag.Title = "ModalContent";
+    Layout = "~/Views/Shared/_LayoutMzodal.cshtml";
+	ViewBag.ModalLayoutOptions = new ModalLayoutOptions()
+	{
+		Size = ModalSize.ExtraSmall
+	};
+}
+
+
+<p><strong>Are you sure you want to do this thing?</strong></p>
+<div class="txtc">
+	<button class="btn pri js-confirm">Yes</button>
+	<button class="btn modal-close">No</button>
+</div>
+<script>
+	$(".mzodal .js-confirm").click(function () {
+		$.mzodal.hide();
+		alert("you chose yes!");
+	});
+</script>
