@@ -1,0 +1,14 @@
+﻿@using Mzodal.Classes
+
+@{
+	var options = ViewBag.ModalLayoutOptions as ModalLayoutOptions ?? ModalLayoutOptions.Default;
+}
+<div class="@options.Size.CssClass @(options.DisableBackgroundClose ? "noclose" : string.Empty)" data-name="@options.Name">
+	@if(options.ShowCloseButton)
+	{
+		<div class="close modal-close"></div>
+	}
+	<div class="frame">
+		@RenderBody()	
+	</div>
+</div>
