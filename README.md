@@ -1,6 +1,6 @@
 <h1>Mzodal</h1>
 <p>A lightweight modal library for use with jQuery and ASP.NET MVC.</p>
-
+<p>This project is on-going and currently only intended to provide an example of my programming style. The provided project is constructed as an ASP.NET MVC (VS 2013) web site to demonstrate the use of the built-in modal get/post methods and the re-usable layout page with options.</p>
 <h2>Features include:</h2>
 <ul>
 	<li>Auto height adjustment to fit window</li>
