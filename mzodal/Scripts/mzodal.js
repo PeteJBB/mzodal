@@ -4,13 +4,6 @@
 		"mzodal": new mzodal()
 	});
 
-	$(document).on("click", ".js-mzodal", function (e) {
-		e.preventDefault();
-		var elem = $(this);
-		var href = elem.attr("href") || elem.data("href");
-		$.mzodal.get(href);
-	});
-
 	function mzodal() {
 		var elem;
 		var self = this;
@@ -28,6 +21,13 @@
 			elem.on("click", ".modal-close", function () { hide(true); });
 			
 			$(window).resize(window_resize);
+
+			$(document).on("click", ".js-mzodal", function (e) {
+				e.preventDefault();
+				var link = $(this);
+				var href = link.attr("href") || link.data("href");
+				get(href);
+			});
 		}
 
 		function elem_click(e) {
