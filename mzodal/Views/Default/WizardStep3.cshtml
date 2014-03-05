@@ -1,0 +1,53 @@
+﻿@using Mzodal.Classes
+@model Mzodal.Models.WizardModel
+@{
+    ViewBag.Title = "ModalContent";
+    Layout = "~/Views/Shared/_LayoutMzodal.cshtml";
+	ViewBag.ModalLayoutOptions = new ModalLayoutOptions()
+	{
+		Size = ModalSize.Small
+	};
+}
+
+
+<h3>Wizard Step 3</h3>
+<form>
+	@Html.HiddenFor(m => m.WhoDaMan)
+	@Html.HiddenFor(m => m.Word)
+
+	<p>What do you get if you multiply six by nine?</p>
+	<ul>
+		<li>
+			@Html.RadioButtonFor(m => m.TheAnswer, "42", new { id = "Option1" })
+			@Html.Label("Option1", "42")
+		</li>
+		<li>
+			@Html.RadioButtonFor(m => m.TheAnswer, "54", new { id = "Option2" })
+			@Html.Label("Option2", "54")
+		</li>
+		<li>
+			@Html.RadioButtonFor(m => m.TheAnswer, "69", new { id = "Option3" })
+			@Html.Label("Option3", "69")
+		</li>
+	</ul>
+	<div class="cfix" style="margin-top:12px;">
+		<div class="fltl">
+			<button type="button" class="btn modal-back">Back</button>
+		</div>
+		<div class="fltr">
+			<button type="submit" id="btnNext" class="btn pri" @(string.IsNullOrEmpty(Model.Word) ? "disabled" : "")>Next</button>
+		</div>
+	</div>
+</form>
+
+<script>
+	$(".mzodal form").submit(function (e) {
+		e.preventDefault();
+		var args = $(this).serialize();
+		$.mzodal.post("@Url.Action("WizardStep4")", args);
+	});
+
+	$(".mzodal input").change(function () {
+		$("#btnNext").prop("disabled", false);
+	});
+</script>

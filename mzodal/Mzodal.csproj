@@ -80,7 +80,6 @@
     <Content Include="Content\styles.css" />
     <Content Include="Content\mzodal.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\reset.css" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -95,6 +94,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Classes\ModalLayoutOptions.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Models\WizardModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -106,6 +106,10 @@
     <Content Include="Views\Shared\_LayoutMzodal.cshtml" />
     <Content Include="Views\Default\BasicModal.cshtml" />
     <Content Include="Views\Default\ConfirmationBox.cshtml" />
+    <Content Include="Views\Default\WizardStep1.cshtml" />
+    <Content Include="Views\Default\WizardStep2.cshtml" />
+    <Content Include="Views\Default\WizardStep3.cshtml" />
+    <Content Include="Views\Default\WizardStep4.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,9 +117,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

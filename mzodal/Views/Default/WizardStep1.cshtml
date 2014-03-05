@@ -1,0 +1,46 @@
+﻿@using Mzodal.Classes
+@model Mzodal.Models.WizardModel
+
+@{
+	ViewBag.Title = "ModalContent";
+	Layout = "~/Views/Shared/_LayoutMzodal.cshtml";
+	ViewBag.ModalLayoutOptions = new ModalLayoutOptions()
+	{
+		Size = ModalSize.Small
+	};
+}
+
+
+<h3>Wizard Step 1</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a nibh vel dolor ornare aliquet.</p>
+<form>
+	<label for="WhoDaMan"><strong>Who da man?</strong></label>
+	<div>
+		<select id="WhoDaMan" name="WhoDaMan">
+			<option></option>
+			<option>You da man</option>
+			<option>Me da man</option>
+			<option>He-man da man</option>
+		</select>
+	</div>
+	<div class="cfix" style="margin-top:12px;">
+		<div class="fltl">
+			<button type="button" class="btn modal-back">Back</button>
+		</div>
+		<div class="fltr">
+			<button type="submit" id="btnNext" class="btn pri" disabled>Next</button>
+		</div>
+	</div>
+</form>
+
+<script>
+	$(".mzodal form").submit(function (e) {
+		e.preventDefault();
+		var args = $(this).serialize();
+		$.mzodal.post("@Url.Action("WizardStep2")", args);
+	});
+
+	$("#WhoDaMan").change(function () {
+		$("#btnNext").prop("disabled", $(this).val() == "");
+	});
+</script>

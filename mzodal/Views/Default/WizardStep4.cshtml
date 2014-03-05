@@ -1,0 +1,30 @@
+﻿@using Mzodal.Classes
+@model Mzodal.Models.WizardModel
+@{
+    ViewBag.Title = "ModalContent";
+    Layout = "~/Views/Shared/_LayoutMzodal.cshtml";
+	ViewBag.ModalLayoutOptions = new ModalLayoutOptions()
+	{
+		Size = ModalSize.Small
+	};
+}
+
+
+<h3>Your Resuts</h3>
+<div>
+	<strong>Who da man?: </strong> @Model.WhoDaMan
+</div>
+<div>
+	<strong>What rhymes with Tennis?: </strong> @Model.Word
+</div>
+<div>
+	<strong>Six times nine?: </strong> @Model.TheAnswer
+</div>
+<div class="cfix" style="margin-top:12px;">
+	<div class="fltl">
+		<button type="button" class="btn modal-back">Back</button>
+	</div>
+	<div class="fltr">
+		<button type="button" class="btn pri modal-close">Finish</button>
+	</div>
+</div>

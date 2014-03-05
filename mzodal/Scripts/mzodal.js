@@ -1,7 +1,7 @@
 ﻿(function ($) {
 
-	$(document).ready(function() {
-		$.mzodal = new mzodal();
+	$.extend(true, $, {
+		"mzodal": new mzodal()
 	});
 
 	$(document).on("click", ".js-mzodal", function (e) {
@@ -254,7 +254,7 @@
 			"onUnload": new easyEvent()		// fired when html changes or window is closed - use to unbind events within a modal
 		});
 
-		init();
+		$(document).ready(init);
 
 		return this;
 	};

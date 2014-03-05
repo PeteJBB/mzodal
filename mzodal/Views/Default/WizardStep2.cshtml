@@ -1,0 +1,40 @@
+﻿@using Mzodal.Classes
+@model Mzodal.Models.WizardModel
+@{
+    ViewBag.Title = "ModalContent";
+    Layout = "~/Views/Shared/_LayoutMzodal.cshtml";
+	ViewBag.ModalLayoutOptions = new ModalLayoutOptions()
+	{
+		Size = ModalSize.Small
+	};
+}
+
+
+<h3>Wizard Step 2</h3>
+<form>
+	@Html.HiddenFor(m => m.WhoDaMan)
+
+	<p>Enter a word that rhymes with Tennis</p>
+	<div class="rel">@Html.TextBoxFor(m => m.Word)</div>
+	
+	<div class="cfix" style="margin-top:12px;">
+		<div class="fltl">
+			<button type="button" class="btn modal-back">Back</button>
+		</div>
+		<div class="fltr">
+			<button type="submit" id="btnNext" class="btn pri" @(string.IsNullOrEmpty(Model.Word) ? "disabled" : "")>Next</button>
+		</div>
+	</div>
+</form>
+
+<script>
+	$(".mzodal form").submit(function (e) {
+		e.preventDefault();
+		var args = $(this).serialize();
+		$.mzodal.post("@Url.Action("WizardStep3")", args);
+	});
+
+	$("#Word").focus().keydown(function () {
+		$("#btnNext").prop("disabled", $(this).val() == "");
+	});
+</script>
